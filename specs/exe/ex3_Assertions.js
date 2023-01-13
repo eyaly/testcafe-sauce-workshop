@@ -2,6 +2,7 @@ import {Selector  as $, ClientFunction} from 'testcafe';
 
 // 1. Add selector
 const inventoryList = $(".inventory_list");
+const usernameInput = $('#user-name');
 
 // 2. Add client function for getting the URL
 const getURL =  ClientFunction(() => window.location.href);
@@ -11,11 +12,11 @@ fixture ("SauceDemo Fixture")
     
     test("Login Test", async t => {
         await t
-            .typeText("#user-name", "standard_user")
+            .typeText(usernameInput, "standard_user")
             .typeText("#password", "secret_sauce")
             .click("#login-button")
 
-            // 3. Add assertion if the element exists
+            // 3. Add assertion if an element in the inventory page exists
 
             // 4. Add assertion if the URL contains inventory
 
@@ -23,7 +24,6 @@ fixture ("SauceDemo Fixture")
 
     test("Login Check Username Test", async t => {
         const username = "standard_user";
-        const usernameInput = $('#user-name');
 
         await t
 
