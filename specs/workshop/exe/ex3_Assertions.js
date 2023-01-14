@@ -34,5 +34,5 @@ fixture ("SauceDemo Fixture")
 
     } );
 
-    // 7. Run the fixture file: testcafe chrome specs/exe/ex3_Assertions.js
+    // 7. Run the fixture file: testcafe chrome specs/workshop/exe/ex3_Assertions.js
  
