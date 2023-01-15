@@ -5,8 +5,6 @@ const usernameInput = $('#user-name');
 const passwordInput = $('#password');
 const loginBtn = $('#login-button');
 
-const getURL =  ClientFunction(() => window.location.href);
-
 fixture ("Test login page")
     .page("https://www.saucedemo.com")
     .beforeEach(async t => {
