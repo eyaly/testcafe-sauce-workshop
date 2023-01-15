@@ -30,3 +30,4 @@ nightwatch/webdriver/examples/update-sauce/tests_output/
 *.xml
 v6/
 **/artifacts/
+package-lock.json
