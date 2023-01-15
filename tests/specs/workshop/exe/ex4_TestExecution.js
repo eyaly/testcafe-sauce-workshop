@@ -31,13 +31,14 @@ fixture ("SauceDemo Fixture")
     } );
 
     // Execute the tests
-    // 1. View a list of all available browsers 
-    // testcafe --list-browsers
-    // 2. Execute on saome of the browsers
-    // testcafe chrome, firefox specs/workshop/exe/ex4_TestExecution.js
-    // 3. Run Tests in Parallel
-    // testcafe -c 2 chrome  specs/workshop/exe/ex4_TestExecution.js
-    // 4. Run on Remore devices - Generate QR Code and browser link 
-    //  to be used by real devices or emulators and simulators
-    // testcafe remote specs/workshop/exe/ex4_TestExecution.js --qr-code
+    //Command Line Interface
+        // 1. View a list of all available browsers 
+        // testcafe --list-browsers
+        // 2. Execute on saome of the browsers
+        // testcafe chrome, firefox tests/specs/workshop/exe/ex4_TestExecution.js
+        // 3. Run Tests in Parallel
+        // testcafe -c 2 chrome  tests/specs/workshop/exe/ex4_TestExecution.js
+        // 4. Run on Remore devices - Generate QR Code and browser link 
+        //  to be used by real devices or emulators and simulators
+        // testcafe remote tests/specs/workshop/exe/ex4_TestExecution.js --qr-code
  

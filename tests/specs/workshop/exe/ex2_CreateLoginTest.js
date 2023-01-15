@@ -8,6 +8,6 @@ fixture ("SauceDemo Fixture")
 // 2. Write the command to type the text "standard_user" to the username field
 // 2. Write the command to type the text "secret_sauce" to the password field
 // 3. Click on the LOGIN button
-// 4. Run the test: testcafe chrome specs/exe/ex2_CreateLoginTest.js
+// 4. Run the test: testcafe chrome tests/specs/workshop/exe/ex2_CreateLoginTest.js
     } );
  
