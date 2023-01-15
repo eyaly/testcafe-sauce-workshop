@@ -8,7 +8,6 @@ const swagTitle = $('.inventory_details_name');
 fixture ("Test swag items list page")
     .page("https://www.saucedemo.com")
     .beforeEach(async t => {
-        await t.resizeWindow(1400, 900);
         await login("standard_user","secret_sauce");
       });
     

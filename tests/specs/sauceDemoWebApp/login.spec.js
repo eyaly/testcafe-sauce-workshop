@@ -7,9 +7,6 @@ const loginBtn = $('#login-button');
 
 fixture ("Test login page")
     .page("https://www.saucedemo.com")
-    .beforeEach(async t => {
-        await t.resizeWindow(1400, 900);
-      });
     
     test("should be able load the login page", async t => {
         await t.expect(usernameInput.exists).ok('Page should be inventory',{ timeout: 500 });
