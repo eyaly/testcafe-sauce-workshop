@@ -29,11 +29,9 @@ Or using Node Version Manager (NVM): https://npm.github.io/installation-setup-do
 
 The current version is 18. And any new version from 14+ should be fine 
 
-To check if Node was installed, open a terminal and run the command: 
+To check if Node was installed, open a terminal and run the command:    
+`node -v`
 
-```bash
-node -v
-``` 
 and: 
 ```bash
 npm -v
