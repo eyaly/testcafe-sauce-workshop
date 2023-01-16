@@ -23,8 +23,7 @@ suites:
   - name: "Testcafe - iOS Tests - Safari"
     browserName: "safari"
     src:
-      # test files glob
-      - "**/login.*"
+      - "tests/**/*.spec.js"
     simulators:
       - name: iPhone 14 Simulator
         platformName: iOS
