@@ -30,8 +30,9 @@ Or using Node Version Manager (NVM): https://npm.github.io/installation-setup-do
 The current version is 18. And any new version from 14+ should be fine 
 
 To check if Node was installed, open a terminal and run the command:    
-`node -v`
-
+```bash
+node -v
+```
 and: 
 ```bash
 npm -v
@@ -89,18 +90,18 @@ It will run all tests in your local Chrome browser.
 
 ## Run tests in Sauce
 To run the examples, use the `saucectl`-command and select a configuration. This can be done by opening a terminal and type in the 
-following command
-   
-    > **Note:** `npx` is used here because `saucectl` is one of the `devDependencies` in this project. When `saucectl`
-    > is installed globally (with `npm install -g saucectl`) then you can use `saucectl` without the `npx prefix`
+following command:
 
-    ```shell
-    # For the EU DC, where `#` is the number of the example
-    npx saucectl run -c ./.sauce/config-ex#.yml
+```shell
+# For the EU DC, where `#` is the number of the example
+npx saucectl run -c ./.sauce/config-ex#.yml
      
-    # For the US DC, where `#` is the number of the example
-    npx saucectl run -c ./.sauce/config-ex#.yml --region us-west-1
-    ```
+# For the US DC, where `#` is the number of the example
+npx saucectl run -c ./.sauce/config-ex#.yml --region us-west-1
+```
+   
+> **Note:** `npx` is used here because `saucectl` is one of the `devDependencies` in this project. When `saucectl`
+    > is installed globally (with `npm install -g saucectl`) then you can use `saucectl` without the `npx prefix`
 
 > **Note:** To see all options that `saucectl` is providing type in `npx saucectl --help` and in [Sauce Labs doc](https://docs.saucelabs.com/web-apps/automated-testing/testcafe/yaml/)
 
