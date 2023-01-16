@@ -106,68 +106,8 @@ following command
 
 > **Note:** To see all options that `saucectl` is providing type in `npx saucectl --help` and in [Sauce Labs doc](https://docs.saucelabs.com/web-apps/automated-testing/testcafe/yaml/)
 
-It will run all tests, and the logs will look like this
 
-<details>
-  <summary>Expand to see the logs</summary>
-
-```logs
-npm run test.local
-
-> testcafe-saucedemo@1.0.0 test.local
-> node tests/configs/local.chrome.config.js
-
- Running tests in:
- - Chrome 91.0.4472.114 / macOS 10.15.7
-
- Test cart items overview page
- ✓ should validate that we can continue shopping
- ✓ should validate that we can go from the cart to the checkout page
- ✓ should validate that a product can be removed from the cart
-
- Test cart items overview page
- ✓ should validate that we can continue shopping
-
- Test checkout overview page
- ✓ should validate we get an error if we don not provide all personal information
- ✓ should validate that we can cancel the first checkout
- ✓ should be able to continue the checkout
-
- Test checkout summary page
- ✓ should validate that we can continue shopping
- ✓ should validate that we can cancel checkout and go to the inventory page
- ✓ should validate that we have 1 product in our checkout overview
-
- Test Login
- ✓ should be able to test loading of login page
- ✓ should be able to login with a standard user
- ✓ should not be able to login with a locked user
-
- Test checkout summary page
- ✓ should be able to go to the swag items overview page
- ✓ should be able to open the about page
- ✓ should be able to log out
- ✓ should be able to clear the cart
-
- Test swag items details page
- ✓ should validate that we can go back from the details to the inventory page
- ✓ should validate that a product can be added to a cart
- ✓ should validate that a product can be removed from the cart
-
- Test swag items overview page
- ✓ should validate that all products are present
- ✓ should validate that the details of a product can be opened
- ✓ should validate that a product can be added to a cart
- ✓ should validate that a product can be removed from the cart
- ✓ should be able to open the cart summary page
-
-
- 25 passed (2m 23s)
-Tests failed: 0
-```
-</details>
-
-## Examples
+### Examples
 All below mentioned examples can be found in the [`.sauce`](./.sauce)-folder. You can run the configurations by running
 the following command from the root of this folder
 
@@ -175,12 +115,6 @@ the following command from the root of this folder
 # By default all configs run on the EU DC, if you run `saucectl` directly from the command line and you
 # want to run on the US DC then add `--region us-west-1` at the end
 npx saucectl run -c ./.sauce/config-ex#.yml
-
-# OR for use with the EU data center
-npm run test.sauce.ex#.eu
-
-# OR for use with the US data center
-npm run test.sauce.ex#.us
 ```
 
 > **Note:** The `#` stands for the number of the below mentioned examples.
