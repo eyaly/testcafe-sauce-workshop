@@ -1,5 +1,5 @@
 # TestCafe workshop includes Sauce Labs Testrunner Toolkit
-This is a workshop about writing your first TestCafe tests and running them with the Sauce Labs Testrunner Toolkit
+This is a workshop about writing your first TestCafe tests and running them locally and with the Sauce Labs Testrunner Toolkit
 > **For Demonstration Purposes Only**\
 > The code in these scripts is provided on an "AS-IS" basis without warranty of any kind, either express or implied,
 > including without limitation any implied warranties of condition, uninterrupted use, merchantability, fitness for a
@@ -65,6 +65,37 @@ testcafe -v
 3. Instead of forking this repository, you can clone the project by opening a new terminal and using the following command:   
  `git clone https://github.com/eyaly/testcafe-sauce-workshop.git`
   
+---
+### Run Sanity Test
+
+- Make sure you are in the root of the project
+- Run the following command in the terminal
+
+```bash
+testcafe chrome tests/specs/demoTest.js
+```  
+
+It will run the [demoTest](/tests/specs/demoTest.js) file, and the logs will look like this
+
+<details>
+  <summary>Expand to see the logs</summary>
+
+```logs
+
+% testcafe chrome tests/specs/demoTest.js                       
+Using locally installed version of TestCafe.
+ Running tests in:
+ - Chrome 108.0.0.0 / Big Sur 11
+
+ Demo Fixture
+This is a Demo Test :-)
+ ✓ Demo Test
+
+ 1 passed (3s)
+
+```
+</details>
+
 ---
 ### Install dependencies
 - Make sure you are in the root of the project
