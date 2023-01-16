@@ -7,8 +7,8 @@ This is a workshop about writing your first TestCafe tests and running them with
 > and should not be used in production. Issues regarding these scripts should be submitted through GitHub.
 
 ## Introduction
-This folder contains a few exercides with answers about writing your first TestCafe tests.  
-The folder also contains a simple set up for TestCafe which can be run locally and with the Sauce Labs
+This folder contains a few exercises with answers about writing your first TestCafe tests.  
+The folder also contains a simple setup for TestCafe which can be run locally and with the Sauce Labs
 [`saucectl`](https://docs.saucelabs.com/testrunner-toolkit)-runner.
 
 ## Setup  
@@ -72,15 +72,15 @@ testcafe -v
   
   `npm install`
   
-  This will install all dependencies, including the `saucectl`-runner
+  This will install all dependencies, including the `saucectl` CLI.
 
 ## The Workshop 
-- You can find in [this](https://github.com/eyaly/testcafe-sauce-workshop/tree/main/tests/specs/workshop) folder an 'exe' folder and an 'answers' folder.   
-- The [exe](https://github.com/eyaly/testcafe-sauce-workshop/tree/main/tests/specs/workshop/exe) folder contains TestCafe exercises. In each file, you will find instructions on what you need to do and how to run the tests locally on your machine
-- The [answers](https://github.com/eyaly/testcafe-sauce-workshop/tree/main/tests/specs/workshop/answers) folder, contains the solution and the code for the exercises.
+- The [workshop](/tests/specs/workshop) folder holds an 'exe' folder and an 'answers' folder.   
+  - The [exe](/tests/specs/workshop/exe) folder contains TestCafe exercises. In each file, you will find instructions on what you need to do and how to run the tests locally on your machine
+  - The [answers](/tests/specs/workshop/answers) folder, contains the solution and the code for the exercises.
 
 ## Run tests locally
-The project also contains [this](https://github.com/eyaly/testcafe-sauce-workshop/tree/main/tests/specs/sauceDemoWebApp) folder with tests that you can run locally and on SauceLabs.   
+The project also contains [this](/tests/specs/sauceDemoWebApp) folder with tests that you can run locally and on SauceLabs.   
 To run the tests on your local machine, the only thing you need to have is Chrome. If you have it you can run this 
 command in a new terminal
 
