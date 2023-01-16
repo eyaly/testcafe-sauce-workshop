@@ -100,8 +100,7 @@ npx saucectl run -c ./.sauce/config-ex#.yml
 npx saucectl run -c ./.sauce/config-ex#.yml --region us-west-1
 ```
    
-> **Note:** `npx` is used here because `saucectl` is one of the `devDependencies` in this project. When `saucectl`
-    > is installed globally (with `npm install -g saucectl`) then you can use `saucectl` without the `npx prefix`
+> **Note:** `npx` is used here because `saucectl` is one of the `devDependencies` in this project. When `saucectl` is installed globally (with `npm install -g saucectl`) then you can use `saucectl` without the `npx prefix`
 
 > **Note:** To see all options that `saucectl` is providing type in `npx saucectl --help` and in [Sauce Labs doc](https://docs.saucelabs.com/web-apps/automated-testing/testcafe/yaml/)
 
