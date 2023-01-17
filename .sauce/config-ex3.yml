@@ -40,19 +40,19 @@ suites:
     # - '2560x1600'
     screenResolution: "1600x1200"
     src:
-      - "**/login.*"
+      - "**/login.spec.*"
   - name: "Testcafe - Cross Browser - Swag Labs Login - Windows-Microsoft Edge"
     browserName: microsoftedge
     platformName: "Windows 10"
     screenResolution: "1600x1200"
     src:
-      - "**/login.*"
+      - "**/login.spec.*"
   - name: "Testcafe - Cross Browser - Swag Labs Login - Windows-Firefox"
     browserName: firefox
     platformName: "Windows 10"
     screenResolution: "1600x1200"
     src:
-      - "**/login.*"
+      - "**/login.spec.*"
   - name: "Testcafe - Cross Browser - Swag Labs Login - Mac 11-Chrome"
     browserName: chrome
     platformName: "macOS 11.00"
@@ -67,25 +67,25 @@ suites:
     # - '2048x1536'
     screenResolution: "1600x1200"
     src:
-      - "**/login.*"
+      - "**/login.spec.*"
   - name: "Testcafe - Cross Browser - Swag Labs Login - Mac 11-Firefox"
     browserName: firefox
     platformName: "macOS 11.00"
     screenResolution: "1600x1200"
     src:
-      - "**/login.*"
+      - "**/login.spec.*"
   - name: "Testcafe - Cross Browser - Swag Labs Login - Mac 11-MicrosoftEdge"
     browserName: microsoftedge
     platformName: "macOS 11.00"
     screenResolution: "1600x1200"
     src:
-      - "**/login.*"
+      - "**/login.spec.*"
   - name: "Testcafe - Cross Browser - Swag Labs Login - Mac 11-Safari"
     browserName: safari
     platformName: "macOS 11.00"
     screenResolution: "1600x1200"
     src:
-      - "**/login.*"
+      - "**/login.spec.*"
 # Controls what artifacts to fetch when the suite on Sauce Cloud has finished.
 # artifacts:
 #   download:

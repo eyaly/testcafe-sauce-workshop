@@ -26,7 +26,7 @@ suites:
     screenResolution: "1600x1200"
     src:
       # test files glob
-      - "**/login.*"
+      - "**/login.spec.*"
   - name: "Testcafe - Parallel - Swag Labs Checkout - Chrome"
     browserName: chrome
     platformName: "Windows 10"
