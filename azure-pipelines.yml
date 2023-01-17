@@ -44,7 +44,6 @@ steps:
   displayName: 'run TestCafe tests on SauceLabs cloud'
   inputs:
     script: |
-      testcafe --version
       saucectl run --config ./.sauce/config-ex2.yml
   env:
     SAUCE_USERNAME: $(sauceUsername) #this will store the value from 'sauceUsername' into SAUCE_USERNAME
