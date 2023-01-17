@@ -15,12 +15,12 @@ steps:
     versionSpec: '14.x'
   displayName: 'Install Node.js'
 
-# - task: CmdLine@2
-#   displayName: 'Install sauceCtl'
-#   inputs:
-#     script: |
-#       sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
-#       saucectl --version
+- task: CmdLine@2
+  displayName: 'Install sauceCtl'
+  inputs:
+    script: |
+      sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
+      saucectl --version
 
 - task: CmdLine@2
   displayName: 'Install Dependencies'
