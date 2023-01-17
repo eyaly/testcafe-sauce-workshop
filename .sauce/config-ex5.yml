@@ -1,0 +1,40 @@
+apiVersion: v1alpha
+kind: testcafe
+
+# Sauce Labs specific information
+sauce:
+  region: eu-central-1 # or us-west-1
+  tunnel:
+    name: testcafe_tunnel
+    owner: eyalyovel
+  concurrency: 10 # Controls how many suites are executed at the same time.
+  metadata:
+    tags:
+      - testcafe
+      - default
+      - Sauce Connect using tunnel
+    build: "TestCafe: Local test set - $DATE"
+
+# Testcafe specific info
+testcafe:
+  version: 2.1.0
+# Controls what files are available in the context of a test run (unless explicitly excluded by .sauceignore).
+rootDir: ./
+
+# Tests
+suites:
+  - name: "Testcafe - local - Chrome"
+    browserName: chrome
+    platformName: "Windows 10"
+    screenResolution: "1600x1200"
+    src:
+      # test files glob
+      - "tests/**/*.local.js"
+
+# Controls what artifacts to fetch when the suite on Sauce Cloud has finished.
+artifacts:
+  download:
+    directory: ./artifacts
+    match:
+      - "*"
+    when: always
