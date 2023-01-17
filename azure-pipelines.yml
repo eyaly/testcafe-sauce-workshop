@@ -34,7 +34,7 @@ steps:
     script: |
       npm install
 - task: CmdLine@2
-  displayName: 'Check TC'
+  displayName: 'Install testcafe (not needed when run on Sauce)'
   inputs:
     script: |
       npm install -g testcafe
