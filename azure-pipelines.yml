@@ -23,7 +23,7 @@ steps:
 #       saucectl --version
 
 - task: CmdLine@2
-  displayName: 'Install sauceCtl 2'
+  displayName: 'Install sauceCtl'
   inputs:
     script: |
       npm install -g saucectl
@@ -41,7 +41,7 @@ steps:
       testcafe --version      
 
 - task: CmdLine@2
-  displayName: 'run TestCafe tests'
+  displayName: 'run TestCafe tests on SauceLabs cloud'
   inputs:
     script: |
       testcafe --version
@@ -50,5 +50,8 @@ steps:
     SAUCE_USERNAME: $(sauceUsername) #this will store the value from 'sauceUsername' into SAUCE_USERNAME
     SAUCE_ACCESS_KEY: $(sauceKey)
 
-  
+- task: PublishTestResults@2
+  inputs:
+    testResultsFiles: '**/report.xml'
+    testResultsFormat: 'JUnit'
 
