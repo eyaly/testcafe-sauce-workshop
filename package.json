@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test.local": "testcafe chrome tests/**/*.spec.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "saucectl": "^0.119.0",
-    "testcafe": "^2.2.0"
+    "testcafe": "*",
+    "testcafe-reporter-xunit": "*"
   }
 }

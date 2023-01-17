@@ -34,7 +34,7 @@ fixture ("SauceDemo Fixture")
     //Command Line Interface
         // 1. View a list of all available browsers 
         // testcafe --list-browsers
-        // 2. Execute on saome of the browsers
+        // 2. Execute on some of the browsers
         // testcafe chrome, firefox tests/specs/workshop/exe/ex4_TestExecution.js
         // 3. Run Tests in Parallel
         // testcafe -c 2 chrome  tests/specs/workshop/exe/ex4_TestExecution.js
