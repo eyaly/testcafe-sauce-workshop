@@ -23,6 +23,11 @@ steps:
 #       testcafe --version
 
 - task: CmdLine@2
+  displayName: 'Check TestCafe version'
+  inputs:
+    script: |
+      testcafe --version
+- task: CmdLine@2
   displayName: 'Install sauceCtl'
   inputs:
     script: |
@@ -32,6 +37,7 @@ steps:
   displayName: 'run TestCafe tests'
   inputs:
     script: |
+      testcafe --version
       saucectl run --config ./.sauce/config-ex1.yml
   env:
     SAUCE_USERNAME: $(sauceUsername) #this will store the value from 'sauceUsername' into SAUCE_USERNAME
