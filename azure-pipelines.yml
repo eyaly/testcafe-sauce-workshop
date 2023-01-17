@@ -15,10 +15,27 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install -g testcafe
-    testcafe -v 
+- task: CmdLine@2
   displayName: 'Install TestCafe'
+  inputs:
+    script: |
+      npm install -g testcafe
+      testcafe --version
+
+- task: CmdLine@2
+  displayName: 'Install sauceCtl'
+  inputs:
+    script: |
+      sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
+      saucectl --version
+- task: CmdLine@2
+  displayName: 'run TestCafe tests'
+  inputs:
+    script: |
+      saucectl run --config ./.sauce/runner-ex1.yml
+  env:
+    SAUCE_USERNAME: $(sauceUsername) #this will store the value from 'sauceUsername' into SAUCE_USERNAME
+    SAUCE_ACCESS_KEY: $(sauceKey)
 
   
 
