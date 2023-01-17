@@ -23,11 +23,6 @@ steps:
 #       testcafe --version
 
 - task: CmdLine@2
-  displayName: 'Check TestCafe version'
-  inputs:
-    script: |
-      testcafe --version
-- task: CmdLine@2
   displayName: 'Install sauceCtl'
   inputs:
     script: |
