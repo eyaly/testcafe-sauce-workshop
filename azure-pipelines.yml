@@ -27,6 +27,8 @@ steps:
   inputs:
     script: |
       npm install
+      pwd
+      ls
       saucectl --version
       testcafe --version
 - task: CmdLine@2
