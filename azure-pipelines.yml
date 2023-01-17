@@ -15,12 +15,12 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- task: CmdLine@2
-  displayName: 'Install TestCafe'
-  inputs:
-    script: |
-      npm install -g testcafe
-      testcafe --version
+# - task: CmdLine@2
+#   displayName: 'Install TestCafe'
+#   inputs:
+#     script: |
+#       npm install -g testcafe
+#       testcafe --version
 
 - task: CmdLine@2
   displayName: 'Install sauceCtl'
