@@ -12,22 +12,23 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '10.x'
+    versionSpec: '14.x'
   displayName: 'Install Node.js'
 
 # - task: CmdLine@2
-#   displayName: 'Install TestCafe'
+#   displayName: 'Install sauceCtl'
 #   inputs:
 #     script: |
-#       npm install -g testcafe
-#       testcafe --version
+#       sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
+#       saucectl --version
 
 - task: CmdLine@2
-  displayName: 'Install sauceCtl'
+  displayName: 'Install Dependencies'
   inputs:
     script: |
-      sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
+      npm install
       saucectl --version
+      testcafe --version
 - task: CmdLine@2
   displayName: 'run TestCafe tests'
   inputs:
