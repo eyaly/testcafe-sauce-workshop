@@ -16,6 +16,9 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    node -v
-    npm -v 
-  displayName: 'Check node versions'
+    npm install -g testcafe
+    testcafe -v 
+  displayName: 'Install TestCafe'
+
+  
+
