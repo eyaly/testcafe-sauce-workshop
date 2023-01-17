@@ -7,12 +7,12 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'Ubuntu 16.04'
 
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '14.x'
+    versionSpec: '18.x'
   displayName: 'Install Node.js'
 
 - task: CmdLine@2
@@ -23,14 +23,21 @@ steps:
       saucectl --version
 
 - task: CmdLine@2
+  displayName: 'Install sauceCtl 2'
+  inputs:
+    script: |
+      npm install -g saucectl
+- task: CmdLine@2
   displayName: 'Install Dependencies'
   inputs:
     script: |
-      npm ci
-      pwd
-      ls
-      saucectl --version
-      testcafe --version
+      npm install
+- task: CmdLine@2
+  displayName: 'Check TC'
+  inputs:
+    script: |
+      testcafe --version      
+
 - task: CmdLine@2
   displayName: 'run TestCafe tests'
   inputs:
