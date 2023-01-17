@@ -15,18 +15,19 @@ steps:
     versionSpec: '18.x'
   displayName: 'Install Node.js'
 
-- task: CmdLine@2
-  displayName: 'Install sauceCtl'
-  inputs:
-    script: |
-      sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
-      saucectl --version
+# - task: CmdLine@2
+#   displayName: 'Install sauceCtl'
+#   inputs:
+#     script: |
+#       sudo sh -c 'curl -L https://saucelabs.github.io/saucectl/install | bash -s -- -b /usr/local/bin'
+#       saucectl --version
 
 - task: CmdLine@2
   displayName: 'Install sauceCtl 2'
   inputs:
     script: |
       npm install -g saucectl
+      saucectl --version
 - task: CmdLine@2
   displayName: 'Install Dependencies'
   inputs:
@@ -36,6 +37,7 @@ steps:
   displayName: 'Check TC'
   inputs:
     script: |
+      npm install -g testcafe
       testcafe --version      
 
 - task: CmdLine@2
